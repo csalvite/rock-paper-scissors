@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  height: 80vh;
+  width: 60vw;
+}
+
+/* Score Section */
+section#score {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+
+section#score > div.score-container {
+  background-color: white;
+  height: 125%;
+  width: 10rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(214, 47%, 23%);
+}
+
+section#score > div.score-container > span.points {
+  font-size: 5rem;
+}
+
+/* Game Section */
+section#game {
+  width: 100%;
+  height: 80%;
+
+  background-image: url(/images/bg-triangle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  user-select: none;
+}
+
+section#game > div.option {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+div.paper {
+  border: 15px solid hsl(230, 89%, 62%);
+  top: 0;
+  left: 50%;
+  transform: translate(-150%, 50%);
+  background-image: url(/images/icon-paper.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div.scissors {
+  border: 15px solid hsl(39, 89%, 49%);
+  top: 0;
+  left: 50%;
+  transform: translate(50%, 50%);
+  background-image: url(/images/icon-scissors.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div.rock {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 15px solid hsl(349, 71%, 52%);
+  background-image: url(/images/icon-rock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Result Styles */
+.result-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 10rem 1fr 10rem;
+  color: white;
+}
+
+/* Option style result containter */
+.result-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+  font-size: 1.1rem;
+  align-items: center;
+}
+
+/* Option style result */
+.result {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* You win/lose and button */
+.result-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.result-text > button {
+  background: whitesmoke;
+  border: none;
+  padding: 1rem 5rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* Rewrite style options cause position */
+.paper-result {
+  border: 15px solid hsl(230, 89%, 62%);
+}
+
+.scissors-result {
+  border: 15px solid hsl(39, 89%, 49%);
+}
+
+.rock-result {
+  border: 15px solid hsl(349, 71%, 52%);
+}
+
+/* Frontend Mentor footer styles, added absolute centered and white color */
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  text-align: center;
+
+  color: white;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 800px) {
+}
