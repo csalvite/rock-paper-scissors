@@ -191,4 +191,32 @@ div.rock {
 }
 
 @media only screen and (max-width: 800px) {
+  main {
+    width: 100vw;
+    height: 90vh;
+  }
+
+  section#score {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  section#game > div.option {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  /* Result Styles */
+  .result-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 12rem 1fr 12rem;
+  }
+
+  .result-option {
+    height: 100%;
+  }
+
+  .result-text {
+    font-size: 2rem;
+  }
 }
